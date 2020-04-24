@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "海外工作指南"
+title = "信息共享 - 海外兔"
 
 enableRobotsTXT = true
 
@@ -53,8 +53,8 @@ anchor = "smart"
 
 [languages]
 [languages.zh]
-title = "海外工作指南"
-description = "到海外工作所需要了解的信息"
+title = "信息共享 - 海外兔"
+description = "海外工作的经验交流，信息分享"
 languageName ="中文"
 # Weight used for sorting.
 weight = 1
@@ -67,7 +67,7 @@ weight = 1
 # Everything below this are Site Params
 
 [params]
-copyright = "Osjobs Team"
+copyright = "Overseas Rabbit Team"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -146,6 +146,6 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/google/docsy"
+	url = "https://github.com/OSJobs/osjobs-info"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
