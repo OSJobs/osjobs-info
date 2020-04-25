@@ -1,8 +1,6 @@
 ---
 title: "新加坡"
 linkTitle: "新加坡"
-weight: 8
+weight: 24
 date: 2020-04-18
 ---
-
-时差：0 小时
