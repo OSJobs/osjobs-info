@@ -26,12 +26,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/%E6%97%A5%E6%9C%AC/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" />
 <meta property="article:published_time" content="2020-04-17T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-18T21:49:20+08:00" /><meta property="og:site_name" content="信息共享 - 海外兔" />
+<meta property="article:modified_time" content="2020-04-25T18:46:06+08:00" /><meta property="og:site_name" content="信息共享 - 海外兔" />
 <meta itemprop="name" content="经验分享">
 <meta itemprop="description" content="该地区工作的经验分享
 ">
 <meta itemprop="datePublished" content="2020-04-17T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-18T21:49:20&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-25T18:46:06&#43;08:00" />
 <meta itemprop="wordCount" content="7">
 
 
@@ -443,8 +443,68 @@
 </ul>
 
 	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  谢谢你的赞赏
+</p>
+<p class="feedback--response feedback--response-no">
+  非常抱歉，<a href="https://github.com/USERNAME/REPOSITORY/issues/new">请告诉我们哪里可以改进</a>.
+</p>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
 	
-	<div class="text-muted mt-5 pt-3 border-top">最后修改 April 18, 2020: <a  href="https://github.com/OSJobs/osjobs-info/commit/dea822d55751efd46270f7fc89870a949ccc3fd2">增加一些地区 (dea822d)</a>
+	
+	<div class="text-muted mt-5 pt-3 border-top">最后修改 April 25, 2020: <a  href="https://github.com/OSJobs/osjobs-info/commit/3f4a5976421ae64f6abda1ce3d52921791faa105">添加部分地区待补充字样 (3f4a597)</a>
 </div>
 </div>
 
